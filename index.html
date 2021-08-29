@@ -1,9 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Snake 2D</title>
+<link rel="stylesheet" href="index.css">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+	<title>Snake 2D</title>
+</head>
+
+<body>
+
 		<script type="module">
-            document.body.innerHTML = `<canvas id="canvas" width="256" height="256">`;
                 let ctx   = canvas.getContext("2d", {alpha: false});
 			let dirs  = {Right: [1,0], Left: [-1,0], Down: [0,1], Up: [0,-1]};
 			let snake = [[8,8]], apple = [4,4], dir = [0,0];
@@ -26,8 +35,15 @@
 			snake.forEach(([x,y]) => ctx.fillRect(x * 16, y * 16, 16, 16));
 		}, 125);
 		</script>
-	</head>
-	<body>
-		<h1>Snake 2D</h1>
+		<canvas id="canvas" width="256" height="256" position="relative" clear="both"></canvas>
+		<div id="info">
+			<h1>Snake 2D</h1>
+			<h3>Snake 2D is an open source game. Initiated by MargsWeb.<br /> This game currently only works
+				in PC and
+				FireFox.
+				<b>It dosent work in Chrome or Edge</b>
+			</h3>
+			<a href="https://github.com/MohammedAbidNafi/Snake-Game">Github Link.</a>
+			</div>
 	</body>
 </html>
